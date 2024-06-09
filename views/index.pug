@@ -1,0 +1,14 @@
+extends common/layout
+
+block layout-content 
+  .main-content 
+    h1.page-title Online Yoga Studio
+    p.page-description Find your perfect yoga class and connect with experienced instructors.
+  section.class-list
+        h2 Our Yoga Classes
+        each class in classes
+          article.class-card
+            h3 #{class.type} - #{class.time}
+            p with #{class.instructorId.name}
+            p #{class.description}
+            a(href="#") Learn More 
