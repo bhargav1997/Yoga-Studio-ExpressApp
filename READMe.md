@@ -31,5 +31,10 @@
 
 ### Resource Citations:
 
--  [FreePik-Group-Women-Stretching-Hall](https://www.freepik.com/free-photo/group-women-stretching-hall_26670805.htm#fromView=search&page=2&position=4&uuid=01819149-5a81-4839-a332-6c3c432bb5ea)
--  [Roll Up Yoga Mat](https://www.freepik.com/free-ai-image/rolled-up-yoga-mat-blue-foam-freshness-generated-by-ai_42735269.htm#fromView=search&page=1&position=38&uuid=01819149-5a81-4839-a332-6c3c432bb5ea)
+-  Free Images from Unsplash.com
+
+[Men Images 1](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+
+[Men Images 2](https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+
+[Men Images 3](https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=2662&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
