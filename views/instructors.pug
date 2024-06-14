@@ -1,0 +1,15 @@
+extends common/layout
+
+block layout-content 
+  .container
+    .row.justify-content-center.align-items-center.mt-5
+      .col-lg-8.text-center
+        h1.page-title.mb-4 Meet Our Instructors
+        .row.justify-content-center
+          each instructor in instructors
+            .col-md-4.mb-4
+              .card.instructor-card
+                img.card-img-top(src=instructor.imageUrl, alt=instructor.name)
+                .card-body
+                  h5.card-title #{instructor.name}
+                  p.card-text #{instructor.bio}

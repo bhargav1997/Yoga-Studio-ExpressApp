@@ -1,0 +1,31 @@
+extends common/adminLayout
+
+block layout-content 
+  .container
+    h1.mt-5 Add Contact
+    form(action="/contact/submit" method="post")
+      .form-group.mt-3
+        label(for="name") Name:
+        input#name.form-control(type="text" name="name" placeholder="John Doe")
+      .form-group.mt-3
+        label(for="email") Email:
+        input#email.form-control(type="email" name="email" placeholder="john.doe@example.com")
+      .form-group.mt-3
+        label(for="message") Message:
+        textarea#message.form-control(name="message" rows="3" placeholder="Your message here...")
+      button.btn.btn-primary.mt-3(type="submit") Add Contact
+    if successMessage
+      p#output.text-success.mt-3 #{successMessage}
+    if errorMessage
+      p#output.text-danger.mt-3 #{errorMessage}
+
+    // Include JavaScript to hide the message after 5 seconds
+    script.
+      document.addEventListener('DOMContentLoaded', (event) => {
+        const output = document.getElementById('output');
+        if (output) {
+          setTimeout(() => {
+            output.style.display = 'none';
+          }, 5000); 
+        }
+      });

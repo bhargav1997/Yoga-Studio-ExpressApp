@@ -1,0 +1,30 @@
+
+extends common/adminLayout
+
+block layout-content 
+    .container
+        h1.mt-5 Add Yoga Class
+        form(action="/admin/add-class/submit" method="post")
+            .form-group.mt-3
+                label(for="type") Type:
+                input#type.form-control(type="text" name="type" placeholder="Vinyasa")
+            .form-group.mt-3
+                label(for="date") Date:
+                input#date.form-control(type="date" name="date" placeholder="2024-07-01")
+            .form-group.mt-3
+                label(for="time") Time:
+                input#time.form-control(type="time" name="time" placeholder="10:00 AM")
+            .form-group.mt-3
+                label(for="description") Description:
+                textarea#description.form-control(name="description" rows="3" placeholder="A dynamic flow class that synchronizes movement with breath.")
+            .form-group.mt-3
+                label(for="instructor") Instructor:
+                input#instructor.form-control(type="text" name="instructor" placeholder="John Doe")
+            .form-group.mt-3
+                label(for="level") Level:
+                input#level.form-control(type="text" name="level" placeholder="Intermediate")
+            button.btn.btn-primary.mt-3(type="submit") Add Class
+        p#output
+
+
+

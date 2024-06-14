@@ -5,7 +5,9 @@ const dotenv = require("dotenv");
 //load the environment variables from .env
 dotenv.config();
 
-const db = require("./modules/db"); //load db.js
+// Func import
+const router = require("./modules/pages/router");
+const adminRouter = require("./modules/pages/adminRouter");
 
 //set up the Express app
 const app = express();
@@ -20,40 +22,12 @@ app.set("view engine", "pug");
 app.use(express.static(path.join(__dirname, "public")));
 
 //  Homepage Route
-app.get("/", async (req, res) => {
-   try {
-      // Fetch all yoga classes from the database
-      const classes = await Class.find().populate("instructorId"); // Populate instructor details
+app.use("/", router);
 
-      res.render("index", { classes }); // Render the index.pug template with classes data
-   } catch (err) {
-      console.error(err);
-      res.status(500).send("Error fetching classes");
-   }
-});
+app.use("/admin", adminRouter);
 
-//  Instructors Route (Optional) (add if you want a dedicated instructors page)
-app.get("/instructors", async (req, res) => {
-   try {
-      // Fetch all instructors from the database
-      const instructors = await Instructor.find();
-
-      res.render("instructors", { instructors }); // Render the instructors.pug template with instructors data
-   } catch (err) {
-      console.error(err);
-      res.status(500).send("Error fetching instructors");
-   }
-});
-
-//  Update Movie Rating Route (replace with updateRating)
-app.get("/movies/updateRating", async (req, res) => {
-   // Replace this code with your logic for updating movie rating using your database functions
-   res.send("Update Movie Rating route not implemented yet!");
-});
-
-// Error handling middleware (optional but recommended)
 app.use((err, req, res, next) => {
-   console.error(err.stack);
+   console.error("Error Stack==>", err.stack);
    res.status(500).send("Internal Server Error");
 });
 

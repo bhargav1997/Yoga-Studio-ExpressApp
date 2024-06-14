@@ -1,0 +1,20 @@
+extends common/adminLayout
+
+block layout-content 
+  .container
+    h1.mt-5 View Contacts and Enquiries
+    if contacts && contacts.length
+      table.table.table-striped
+        thead
+          tr
+            th Name
+            th Email
+            th Message
+        tbody
+          each contact in contacts
+            tr
+              td #{contact.name}
+              td #{contact.email}
+              td #{contact.message}
+    else
+      p No contacts available.

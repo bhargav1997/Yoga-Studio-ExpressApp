@@ -1,0 +1,27 @@
+extends common/layout
+
+block layout-content
+  .container.my-5
+    .row.justify-content-center
+      .col-lg-8
+        h1.page-title.mb-4.text-center Class Details
+        .card.shadow.mb-4
+          .card-header.text-center.bg-primary.text-white
+            h5.card-title.mb-0 #{classData.type ? classData.type : "TBA"}
+          .card-body
+            .row
+              .col-md-6.mb-4
+                h6.card-subtitle.mb-2.text-muted Description
+                p.card-text #{classData.description ? classData.description : "TBA"}
+              .col-md-6.mb-4
+                h6.card-subtitle.mb-2.text-muted Instructor
+                p.card-text #{classData.instructor ? classData.instructor.name : "TBA"}
+              .col-md-6.mb-4
+                h6.card-subtitle.mb-2.text-muted Date
+                p.card-text #{classData.date ? new Date(classData.date).toLocaleDateString() : "TBA"}
+              .col-md-6.mb-4
+                h6.card-subtitle.mb-2.text-muted Time
+                p.card-text #{classData.time ? classData.time : "TBA"}
+              .col-md-6.mb-4
+                h6.card-subtitle.mb-2.text-muted Level
+                p.card-text #{classData.level ? classData.level : "TBA"}

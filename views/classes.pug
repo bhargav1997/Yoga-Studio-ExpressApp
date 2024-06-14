@@ -1,0 +1,18 @@
+extends common/layout
+
+block layout-content
+    .container.my-5
+        .row.justify-content-center
+            .col-lg-8
+                h1.page-title.mb-4.text-center Classes
+                .row
+                    each classData in classes
+                        .col-md-6.mb-4
+                            .card
+                                .card-body
+                                    h5.card-title #{classData.type}
+                                    p.card-text #{classData.description}
+                                    p.card-text Instructor: #{classData.instructor ? classData.instructor : "TBA"}
+                                    p.card-text Date: #{classData.date ? classData.date : new Date().toDateString()}
+                                    p.card-text Time: #{classData.time}
+                                    p.card-text Level: #{classData.level}
